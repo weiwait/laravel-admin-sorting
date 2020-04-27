@@ -102,19 +102,19 @@ SCRITP;
         return /** @lang HTML */ <<<EOT
             <div id="sorting">
                 <div class="btn-group-vertical" style="width: 2em; float: left;">
-                    <button data-id="{$this->row->id}" class="btn btn-xs btn-info btn-block order-ascend" style="height: 2.43em;">
+                    <button title="上升" data-id="{$this->row->id}" class="btn btn-xs btn-info btn-block order-ascend" style="height: 2.43em;">
                         <i class="fa fa-caret-up fa-fw"></i>
                     </button>
-                    <button data-id="{$this->row->id}" class="btn btn-xs btn-default btn-block order-descend" style="height: 2.43em;">
+                    <button title="下降" data-id="{$this->row->id}" class="btn btn-xs btn-default btn-block order-descend" style="height: 2.43em;">
                         <i class="fa fa-caret-down fa-fw"></i>
                     </button>
                 </div>
                 <div class="btn-group-vertical btn-group" style="float: left; width: 3.2em;">
-                    <button data-id="{$this->row->id}" class="btn btn-xs btn-info btn-block order-ascend-specified" style="height: 1.5em;" id="order-add">
+                    <button title="上升 N 位" data-id="{$this->row->id}" class="btn btn-xs btn-info btn-block order-ascend-specified" style="height: 1.5em;" id="order-add">
                         <i class="fa fa-caret-up fa-fw"></i>
                     </button>
                     <input data-sorting-id="{$this->row->id}" type="number" pattern="[0-9]" value="{$this->serial}" style="height: 1.5em; border: none; outline: none; width: 3.2em; text-align: center;">
-                    <button data-id="{$this->row->id}" class="btn btn-xs btn-default btn-block order-descend-specified" style="height: 1.5em;">
+                    <button title="下降 N 位" data-id="{$this->row->id}" class="btn btn-xs btn-default btn-block order-descend-specified" style="height: 1.5em;">
                         <i class="fa fa-caret-down fa-fw"></i>
                     </button>
                 </div>
@@ -127,7 +127,7 @@ SCRITP;
 <!--                    </button>-->
 <!--                </div>-->
                 <div class="btn-group-vertical btn-group" style="float: left; width: 2.4em;">
-                    <button class="btn btn-xs btn-default btn-block order-to" data-id="{$this->row->id}" style="height: 4.76em;">
+                    <button title="排序到目标位置" class="btn btn-xs btn-default btn-block order-to" data-id="{$this->row->id}" style="height: 4.76em;">
                         <i class="fa fa-flash fa-fw"></i>
                     </button>
                 </div>
