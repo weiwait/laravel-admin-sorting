@@ -26,3 +26,11 @@ public function grid()
     $grid->column('field', 'label')->sorting();
 }
 ```
+
+## 安装:
+```shell script
+composer require weiwait-laravel-admin-ext/sorting
+```
+
+## 图片:
+![效果图](https://raw.githubusercontent.com/weiwait/laravel-admin-sorting/master/effect.png)
