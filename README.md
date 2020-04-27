@@ -9,7 +9,7 @@ use Spatie\EloquentSortable\Sortable;
 Class SomeModel extends Model implements Sortable
 {
     use \Weiwait\Sorting\SortingTrait;
-    $sortable = [
+    public $sortable = [
         // 设定升序降序
         'direciton' => 'asc or desc',
          // 设定排序时根据此字段分组，排序将根据此字限定段累加 （query->where($restriction, this->$restriction)）
