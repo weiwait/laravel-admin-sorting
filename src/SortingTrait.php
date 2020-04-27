@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 trait SortingTrait
 {
-    public static function bootSortableTrait()
+    public static function bootSortingTrait()
     {
         static::creating(function ($model) {
             if ($model instanceof Sortable && $model->shouldSortWhenCreating()) {
@@ -178,6 +178,11 @@ trait SortingTrait
 
     public function buildSortQuery()
     {
+        $restriction = optional($this->sortable)['restriction'];
+        if ($this->$restriction) {
+            return static::query()->where($restriction, $this->$restriction);
+        }
+
         return static::query();
     }
 
@@ -300,4 +305,3 @@ trait SortingTrait
         return __CLASS__;
     }
 }
-
